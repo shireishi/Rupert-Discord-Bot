@@ -2,4 +2,4 @@ token.token
 **/rupert.reko/
 **/__pycache__/
 **/Logs/
-!/reputation.log
+!Logs/reputation.log
