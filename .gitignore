@@ -4,3 +4,4 @@ token.token
 **/Logs/chat_log.txt
 **/Logs/reported.txt
 # !Logs/reputation.log
+#https://www.atlassian.com/git/tutorials/saving-changes/gitignore
