@@ -1,5 +1,6 @@
 token.token
 **/rupert.reko/
 **/__pycache__/
-**/Logs/
-!Logs/reputation.log
+**/Logs/chat_log.txt
+**/Logs/reported.txt
+# !Logs/reputation.log
