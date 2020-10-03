@@ -1,3 +1,6 @@
 token.token
-rupert.reko
+*/rupert.asm
+*/rupert.dis
+*/rupert.globals.c
+*/rupert.h
 __pycache__
