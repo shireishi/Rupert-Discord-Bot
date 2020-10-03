@@ -1,4 +1,4 @@
 token.token
-rupert.reko/
+**/rupert.reko
 __pycache__
-Logs/
+**/Logs
