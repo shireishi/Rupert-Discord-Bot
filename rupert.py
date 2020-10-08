@@ -73,7 +73,10 @@ try:
         return (str1.join(s))
 
     def argToId(args):
-        listid = list(args)
+        listid = []
+        for i in args:
+            listid.append(i)
+
         if listid[2] == '!':
         
             listid[0] = ''
@@ -158,7 +161,7 @@ try:
             return cls(discord.FFmpegPCMAudio(filename, **ffmpeg_options), data=data)
 
     def setup():
-        bot.add_cog(CommandErrorHandler(bot))
+        # bot.add_cog(CommandErrorHandler(bot))
         dch.new_command(name = "Resume", description = "Resumes the paused audio on music mode.")
         dch.new_command(name = "Stop", description = "Stops the entire audio track currently playing in music mode.")
         dch.new_command(name = "Join", description = "Invites Rupert to join the user's voice channel.")
@@ -226,7 +229,6 @@ try:
     async def play(ctx, *args):
         if not ctx.message.author.voice:
             await join(ctx)
-        #meow
         #local variables
         global queueList
         global sleepDuration
