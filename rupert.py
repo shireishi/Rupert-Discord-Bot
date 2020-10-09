@@ -23,11 +23,20 @@ from discord.voice_client import VoiceClient
 from info import Info
 from youtube_search import YoutubeSearch
 from commandHandler import discordCommandHandler
+import psutil
+# from pypresence import Presence
 
 token = ""
 
 with open('token.token', 'r') as file:
     token += str(file.read())
+
+secret = ""
+
+with open('secret.token', 'r') as file:
+    secret += str(file.read())
+
+client_id = '746504617507946705'
 
 prefix = '$'
 I = Info()
@@ -35,8 +44,8 @@ rupertColor = 0xFF4500 #0xfa9e1e
 
 bot = commands.Bot(command_prefix=prefix)
 client = discord.Client()
-
 dch = discordCommandHandler()
+# RPC = Presence(client_id)
 
 youtube_dl.utils.bug_reports_message = lambda: ''
 
@@ -122,6 +131,9 @@ try:
         else:
             print("An unknown error has occured.")
 
+    # async def my_coroutine():
+    #     RPC.connect()
+    #     print(RPC.update(state="Lookie Lookie", details="A test of qwertyquerty's Python Discord RPC wrapper, pypresence!"))
 
     class CommandErrorHandler(commands.Cog):
         """
@@ -998,6 +1010,7 @@ try:
     loop = asyncio.get_event_loop()
     loop.create_task(bot.start(token))
     loop.create_task(client.start(token))
+    # loop.run_until_complete(my_coroutine())
     loop.run_forever()
 
     #https://stackoverflow.com/questions/62102897/certifacte-verify-failed-certificate-has-expired-ssl-c1108/62104752#62104752?newreg=c7d8fae3b0264f3892ac0036b22f3466
