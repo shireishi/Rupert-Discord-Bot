@@ -18,6 +18,7 @@
   "homepage": "https://github.com/shireishi/Rupert-Discord-Bot#readme",
   "dependencies": {
     "discord-rpc": "^3.1.4",
-    "discord.js": "^12.3.1"
+    "discord.js": "^12.3.1",
+    "electron": "^10.1.3"
   }
 }

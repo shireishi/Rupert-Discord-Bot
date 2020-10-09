@@ -1,9 +1,22 @@
-// Run with node rupert.js
-const Discord = require("discord.js");
 const RPC = require("discord-rpc");
-const bot = new Discord.Client();
+const rpc = new RPC.Client({
+    transport: "ipc"
+});
 
-let client_id = "746504617507946705";
+rpc.on("ready", () => {
+    rpc.setActivity({
+        details: "Vibing",
+        state: "Meow",
+        largeImageKey: "me",
+        largeImageText: "Hello World",
+        smallImageKey: "me",
+        smallImageText: "test"
+    });
 
-client.lo
+    console.log("Rich presence active");
 
+});
+
+rpc.login({
+    clientId: "752205939628703744"
+});
