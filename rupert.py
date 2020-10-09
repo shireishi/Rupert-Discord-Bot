@@ -357,7 +357,7 @@ try:
 
     @bot.event
     async def on_ready():
-        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="for the prefix {}".format(prefix)))
+        # await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="for the prefix {}".format(prefix)))
         print("{} is running on a {} system by {}".format(__file__, platform.system(), getpass.getuser()))
         setup()
 
