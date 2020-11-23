@@ -1,8 +1,0 @@
-token.token
-**/rupert.reko/
-**/__pycache__/
-**/Logs/chat_log.txt
-**/Logs/reported.txt
-**/node_modules/
-# !Logs/reputation.log
-#https://www.atlassian.com/git/tutorials/saving-changes/gitignore
